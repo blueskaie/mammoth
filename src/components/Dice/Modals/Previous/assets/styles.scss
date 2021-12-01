@@ -1,0 +1,69 @@
+.search-input {
+  height: 50px;
+  line-height: 22px;
+  padding: 14px 24px;
+  border-radius: 2px;
+  border: solid 1px #593781;
+  background-color: #593781;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 27px;
+
+  &::placeholder {
+    color: #d4bdef;
+  }
+}
+
+.previous-table {
+  tbody {
+    max-height: 38px;
+
+    &:nth-child(2n) {
+      background: #593781;
+    }
+
+    tr {
+      height: 38px;
+    }
+
+    &.expanded {
+      max-height: 200px;
+      transition: max-height .3s;
+    }
+  }
+  th {
+    color: #d4bdef;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 16px 15px;
+  }
+
+  td {
+    color: #fff;
+    font-size: 12px;
+    padding: 0 16px;
+    height: 38px;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .details-btn {
+    height: 24px;
+    width: 24px;
+    transition: transform .1s;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .subheader {
+    height: 16px;
+    th {
+      height: 16px;
+      padding: 8px 16px 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+type IInputGroupProp = {
+  padding?: string;
+  payoutStyle?: boolean;
+  label?: string;
+  value?: number;
+  games?: string;
+  type?: string;
+  fontSize?: string;
+  handler?: Function;
+  actionGenerator?: (value: number, step: number, handler: any, min: number, max: number, disabled: boolean) => any;
+  step?: number;
+  min?: number;
+  max?: number;
+  disabled?: boolean;
+  format?: Function;
+  readonly?: boolean;
+  handleRef?: Function;
+  nextInput?: any;
+  hint?: any;
+  maxLength?: number;
+  currencyName?: string;
+  mobilePadding?: string;
+  borderRadios?: string;
+  inputType?: string;
+};
+type IInputGroupState = {
+  focused: boolean;
+  value: number | undefined;
+};
+export type { IInputGroupProp, IInputGroupState };

@@ -1,0 +1,51 @@
+.verifyTable {
+  width: 100%;
+
+  tbody tr:nth-child(2n + 1) {
+    background: #593781;
+  }
+
+  th, tr {
+    text-align: left;
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  th {
+    font-size: 12px;
+    line-height: 1.33;
+    padding: 8px 16px;
+    font-weight: normal;
+    color: #d4bdef;
+  }
+
+  td {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px 16px;
+  }
+
+  .verifyBtn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .verifyHash {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    max-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media (min-width: 500px) {
+      max-width: 150px;
+    }
+  }
+}
+

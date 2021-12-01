@@ -1,0 +1,137 @@
+.modal {
+  background: #2a0b4f;
+  box-shadow: 0px 20px 40px rgba(18, 3, 61, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 500px;
+  max-height: 100%;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 40px 16px 50px;
+  opacity: 0;
+  transform: scale(0);
+  z-index: -1;
+
+  @media (min-width: 500px) {
+    top: 80px;
+    left: calc(50% - 250px);
+    max-height: calc(100% - 160px);
+    padding: 40px 32px 50px;
+  }
+
+  &.open {
+    opacity: 1;
+    z-index: 10001;
+    transform: scale(1);
+    transition: opacity 0.3s ease 0.2s, transform 0.5s;
+  }
+
+  h2 {
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0 0 8px;
+
+    &.rules-step-text {
+      margin: 24px 0;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  blockquote {
+    background: #ece3f7;
+    border-radius: 2px;
+    color: #1f0839;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 8px 0 24px;
+    padding: 16px;
+    width: 100%;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  height: 14px;
+  width: 14px;
+}
+
+.backdrop {
+  background: #3c1b63;
+  cursor: default;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  transform: scale(0);
+
+  &.open {
+    opacity: 0.8;
+    z-index: 10000;
+    transform: scale(1);
+    transition: opacity 0.1s ease 0.1s, transform 0.2s;
+  }
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 32px;
+}
+
+.tabs-btn {
+  appearance: none;
+  background: rgba(#ece3f7, 0.2);
+  color: #ece3f7;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 50px;
+  width: 50px;
+  text-transform: capitalize;
+  padding: 0;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+
+  &.active {
+    background: #ff2976;
+    color: #fff;
+  }
+}
+
+.no-access {
+  &-top {
+    max-width: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+  &-bottom {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

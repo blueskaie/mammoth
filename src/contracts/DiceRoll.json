@@ -1,0 +1,639 @@
+{
+  "entrys": [
+    {
+      "payable": true,
+      "inputs": [
+        {
+          "name": "_ape",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "Payable",
+      "type": "Constructor"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "name": "bet",
+          "type": "uint256"
+        },
+        {
+          "name": "choice",
+          "type": "uint256"
+        },
+        {
+          "name": "seed",
+          "type": "bytes32"
+        },
+        {
+          "name": "over",
+          "type": "bool"
+        }
+      ],
+      "name": "GameCreated",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "name": "round",
+          "type": "uint256"
+        },
+        {
+          "name": "multiplier",
+          "type": "uint64"
+        },
+        {
+          "name": "bet",
+          "type": "uint256"
+        },
+        {
+          "name": "prize",
+          "type": "uint256"
+        },
+        {
+          "name": "choice",
+          "type": "uint256"
+        },
+        {
+          "name": "result",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "seed",
+          "type": "bytes32"
+        },
+        {
+          "name": "over",
+          "type": "bool"
+        },
+        {
+          "name": "state",
+          "type": "uint8"
+        }
+      ],
+      "name": "GamePlayed",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "Event"
+    },
+    {
+      "payable": true,
+      "stateMutability": "Payable",
+      "type": "Fallback"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "constant": true,
+      "name": "betToken",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "_seed",
+          "type": "bytes32"
+        },
+        {
+          "name": "_v",
+          "type": "uint8"
+        },
+        {
+          "name": "_r",
+          "type": "bytes32"
+        },
+        {
+          "name": "_s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "confirm",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "constant": true,
+      "name": "croupier",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint8"
+        }
+      ],
+      "constant": true,
+      "name": "edge",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "name": "bet",
+          "type": "uint256"
+        },
+        {
+          "name": "prize",
+          "type": "uint256"
+        },
+        {
+          "name": "choice",
+          "type": "uint256"
+        },
+        {
+          "name": "result",
+          "type": "uint256"
+        },
+        {
+          "name": "over",
+          "type": "bool"
+        },
+        {
+          "name": "state",
+          "type": "uint8"
+        },
+        {
+          "name": "currency",
+          "type": "uint8"
+        }
+      ],
+      "constant": true,
+      "inputs": [
+        {
+          "type": "bytes32"
+        }
+      ],
+      "name": "games",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "houseProfitAPE",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "houseProfitTRX",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "bool"
+        }
+      ],
+      "constant": true,
+      "name": "isOwner",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "constant": true,
+      "name": "lemurMaster",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "bytes32"
+        }
+      ],
+      "constant": true,
+      "inputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "name": "listGames",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "maxApeBet",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "maxApePayout",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "maxTrxBet",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "maxTrxPayout",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "minApeBet",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "minTrxBet",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "int128"
+        }
+      ],
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_over",
+          "type": "bool"
+        },
+        {
+          "name": "_choice",
+          "type": "uint256"
+        }
+      ],
+      "name": "multiplier",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "constant": true,
+      "name": "owner",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "padding",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_over",
+          "type": "bool"
+        },
+        {
+          "name": "_choice",
+          "type": "uint256"
+        },
+        {
+          "name": "_bet",
+          "type": "uint256"
+        }
+      ],
+      "name": "payout",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "payable": true,
+      "inputs": [
+        {
+          "name": "_choice",
+          "type": "uint256"
+        },
+        {
+          "name": "_over",
+          "type": "bool"
+        },
+        {
+          "name": "_seed",
+          "type": "bytes32"
+        }
+      ],
+      "name": "play",
+      "stateMutability": "Payable",
+      "type": "Function"
+    },
+    {
+      "payable": true,
+      "inputs": [
+        {
+          "name": "_choice",
+          "type": "uint256"
+        },
+        {
+          "name": "_over",
+          "type": "bool"
+        },
+        {
+          "name": "_seed",
+          "type": "bytes32"
+        },
+        {
+          "name": "_bet",
+          "type": "uint256"
+        }
+      ],
+      "name": "playWithApe",
+      "stateMutability": "Payable",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "constant": true,
+      "name": "profitTaker",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "rangeMax",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "rangeMin",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "name": "renounceOwnership",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "min",
+          "type": "uint256"
+        },
+        {
+          "name": "max",
+          "type": "uint256"
+        }
+      ],
+      "name": "setApeBetRange",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "min",
+          "type": "uint256"
+        },
+        {
+          "name": "max",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBetRange",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_min",
+          "type": "uint256"
+        },
+        {
+          "name": "_max",
+          "type": "uint256"
+        },
+        {
+          "name": "_padding",
+          "type": "uint256"
+        }
+      ],
+      "name": "setChoiceRange",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "setCroupier",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_e",
+          "type": "uint8"
+        }
+      ],
+      "name": "setEdge",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_lemurMaster",
+          "type": "address"
+        }
+      ],
+      "name": "setLemurMaster",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_ape",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMaxApePayout",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_trx",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMaxTrxPayout",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "name": "takeProfit",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "constant": true,
+      "name": "totalGamesCount",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawFunds",
+      "stateMutability": "Nonpayable",
+      "type": "Function"
+    }
+  ]
+}

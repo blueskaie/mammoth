@@ -1,0 +1,32 @@
+$brand-second-100: #ffcbde;
+$brand-primary-600: #12033d;
+$brand-second: #ff2976;
+$brand-primary: #22096c;
+$brand-primary-300: #c7baf1;
+$brand-second-300: #d10a52;
+$brand-white: #ffffff;
+$brand-primary-400: #6e658a;
+$brand-primary-700: #04000f;
+$brand-primary-100: #f8f5ff;
+$blue: #0d6eff;
+$pale-lilac: #f0ecff;
+
+$light-yellow: #fff7e8;
+
+$font-family-sans-serif:
+  // Safari for OS X and iOS (San Francisco) -apple-system,
+  // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+  // Windows
+    "Segoe UI",
+  // Android
+    "Roboto",
+  // Basic web fallback
+    "Helvetica Neue",
+  Arial, sans-serif,
+  // Emoji fonts
+    "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+$basic-font: "Open Sans", $font-family-sans-serif;
+$title-font: "Montserrat", $font-family-sans-serif;

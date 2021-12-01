@@ -1,0 +1,205 @@
+@import "../../../assets/scss/variables";
+
+.dice-container {
+  margin: 0 auto 180px;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 1054px;
+  position: relative;
+  z-index: 200;
+
+  @media (min-width: 576px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1054px) {
+    display: grid;
+    grid-template-columns: 266px 1fr;
+    grid-template-areas: "sidebar betting" "sidebar betting" "history history";
+    grid-gap: 16px;
+  }
+}
+
+.dice-img {
+  position: absolute;
+  z-index: -1;
+  display: none;
+
+  @media (min-width: 1054px) {
+    display: block;
+  }
+
+  &-sm-left {
+    height: 98px;
+    width: 98px;
+    top: 340px;
+    left: -150px;
+  }
+
+  &-lg-left {
+    height: 210px;
+    width: 210px;
+    top: 395px;
+    left: -140px;
+  }
+
+  &-sm-right {
+    height: 75px;
+    width: 75px;
+    top: 340px;
+    right: -105px;
+  }
+
+  &-lg-right {
+    height: 174px;
+    width: 168px;
+    top: 395px;
+    right: -130px;
+  }
+}
+
+.card {
+  // background-color: #3c1b63;
+  border-radius: 4px;
+
+  h2 {
+    color: #ece3f7;
+    font-family: "Open Sans";
+    font-size: 16px;
+  }
+}
+
+.sidebar-container {
+  background: #2a0b4f;
+  overflow-y: auto;
+  position: absolute;
+  padding: 47px;
+  top: 0;
+  left: -100%;
+  grid-area: sidebar;
+  z-index: 300;
+  width: 100%;
+  max-width: 360px;
+  transition: left 0.3s;
+
+  @media (min-width: 1054px) {
+    background: transparent;
+    padding: 0;
+    position: relative;
+    left: unset;
+  }
+
+  &-close {
+    background: #1f0839;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    height: 32px;
+    width: 32px;
+    @media (min-width: 1054px) {
+      display: none;
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &.open {
+    box-shadow: 10px 14px 34px #1a0731;
+    left: 0;
+
+    @media (min-width: 1054px) {
+      box-shadow: none;
+    }
+  }
+}
+
+.sidebar-toggler {
+  &-container {
+    grid-area: sidebarToggler;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media (min-width: 576px) {
+      margin: 24px 0 8px;
+    }
+    @media (min-width: 1054px) {
+      display: none;
+    }
+  }
+  appearance: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  height: 22px;
+  text-align: right;
+  color: #ece3f7;
+
+  svg {
+    margin: 2px 0 -3px 2px;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.betting-container.card {
+  grid-area: betting;
+  padding: 16px;
+
+  @media (min-width: 576px) {
+    display: grid;
+    grid-template-areas: "sidebarToggler toolbar" "scroller scroller" "controls controls";
+    padding: 0 40px 0;
+  }
+}
+
+.stats-container {
+  padding: 0;
+  grid-area: stats;
+  margin-bottom: 16px;
+  height: 290px;
+}
+
+.scoreboard-container {
+  grid-area: scoreboard;
+  height: 320px;
+}
+
+.history-container {
+  background-color: #3c1b63;
+  margin-top: 24px;
+  grid-area: history;
+  height: auto;
+  width: 100%;
+}
+
+.betting-toolbar {
+  margin: 24px 0 8px;
+  grid-area: toolbar;
+}
+
+.betting-scroller-container {
+  background: #2a0b4f;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0 30px;
+  grid-area: scroller;
+
+  @media (min-width: 576px) {
+    margin-top: 50px;
+  }
+}
+
+.betting-controls-container {
+  margin: 0 0 32px;
+  grid-area: controls;
+
+  @media (min-width: 576px) {
+    margin: 0;
+  }
+}

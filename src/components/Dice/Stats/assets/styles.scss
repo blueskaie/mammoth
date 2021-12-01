@@ -1,0 +1,123 @@
+.stats {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 24px 24px 0;
+
+  .title {
+    margin: 0;
+  }
+
+  &.demo {
+    background-image: url("images/dice-bg.png");
+    background-position: center;
+    background-size: 66px 66px;
+    background-repeat: no-repeat;
+  }
+
+  .demo-text {
+    height: calc(100% - 88px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #D4BDEF;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 88px);
+    // justify-content: space-between;
+    list-style: none;
+    padding: 16px 0 19px;
+    margin: 0;
+    overflow: hidden;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 8px;
+      line-height: 22px;
+
+      span:nth-child(1) {
+        min-width: 40px;
+      }
+
+      span:nth-child(2) {
+        min-width: 55px;
+        margin: 0 8px;
+        text-align: right;
+      }
+
+      span:nth-child(3) {
+        min-width: 90px;
+        text-align: right;
+      }
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid #593781;
+    color: #D4BDEF;
+    height: 64px;
+    display: flex;
+    margin: 0 -24px;
+    width: calc(100% + 48px);
+    padding: 0 8px;
+
+    &-cell {
+      padding: 16px 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    &-value {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: right;
+    }
+  }
+}
+
+.won {
+  color: #A8FFF5;
+}
+
+.lost {
+  color: #FF80BA;
+}
+
+.btn-login {
+  border-radius: 2px;
+  background-color: #2a0b4f;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.57;
+  padding: 4px 16px;
+  height: 38px;
+  line-height: 30px;
+  margin: 56px auto 0;
+  width: 114px;
+
+  svg {
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 30px;
+  }
+}
+
+.btn-reset {
+  appearance: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 22px;
+  width: 22px;
+}

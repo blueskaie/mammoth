@@ -1,0 +1,219 @@
+@import 'variables';
+//@import '~react-toastify/scss/main';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $basic-font;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:global(.backdrop-open) {
+  overflow: hidden;
+  @media only screen and (min-width: 992px) {
+    padding-right: 16px;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: $basic-font;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: $brand-second;
+  text-decoration: none;
+
+  &:hover {
+    color: $brand-second-300;
+  }
+}
+
+h6, h5, h4, p {
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  color: $brand-primary-600;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+:global(.text-left) {
+  text-align: left!important;
+}
+
+:global(.text-right) {
+  text-align: right!important;
+}
+
+:global(.text-center) {
+  text-align: center!important;
+}
+
+:global(.display-flex) {
+  display: flex;
+}
+
+:global(.btn-primary) {
+  border-radius: 2px;
+  background-color: $brand-second;
+  color: $brand-white;
+  padding: 13px 74px;
+  font-size: 16px;
+  display: inline-block;
+
+  &:hover {
+    background-color: $brand-second-300;
+    color: $brand-white;
+    transition: background-color .3s;
+  }
+}
+
+:global(.btn-primary-small) {
+  border-radius: 2px;
+  background-color: $brand-second;
+  color: $brand-white;
+  padding: 13px 40px;
+  font-size: 16px;
+  display: inline-block;
+
+  &:hover {
+    background-color: $brand-second-300;
+    color: $brand-white;
+    transition: background-color .3s;
+  }
+}
+
+:global(.btn-secondary) {
+  border-radius: 2px;
+  background-color: $brand-primary-100;
+  color: $brand-primary-400;
+  padding: 13px 74px;
+  font-size: 16px;
+}
+
+:global(.rotate) {
+  transform: rotate(180deg);
+}
+
+:global(.container) {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  @media only screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media only screen and (min-width: 992px) {
+    padding: 0 120px;
+  }
+  @media only screen and (min-width: 1200px) {
+    padding: 0;
+  }
+  @media only screen and (min-width: 1440px) {
+    max-width: 1200px;
+  }
+}
+
+:global(.container-small) {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  @media only screen and (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+:global(.container-no-padding) {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  @media only screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+}
+
+:global(.hide) {
+  display: none!important;
+}
+
+:global(.hide-mobile) {
+  @media (max-width: 767px) {
+    display: none!important;
+  }
+}
+
+:global(.hide-desktop) {
+  @media (min-width: 768px) {
+    display: none!important;
+  }
+}
+
+:global(.block) {
+  display: block!important;
+}
+
+:global(.flex) {
+  display: flex!important;
+}
+
+:global(.text-page) {
+  padding-top: 40px;
+  padding-bottom: 120px;
+  h1 {
+    font-weight: bold;
+    font-size: 20px;
+    color: $brand-primary-600;
+    @media only screen and (min-width: 768px) {
+      font-family: 'Montserrat';
+      font-size: 28px;
+      font-weight: 800;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    color: $brand-primary-600;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  h4 {
+    font-size: 16px;
+    color: $brand-primary-400;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  p {
+    color: $brand-primary-400;
+    margin-bottom: 1em;
+  }
+  .main-content {
+    padding-top: 20px;
+  }
+}
+
+:global(.swiper-container) {
+  :global(.swiper-wrapper) {
+    height: auto;
+
+    :global(.swiper-slide) {
+      height: auto;
+    }
+  }
+}
